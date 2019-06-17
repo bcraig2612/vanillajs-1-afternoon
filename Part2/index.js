@@ -1,12 +1,12 @@
-const idInput = document.getElementById("idInput");
-const colorInput = document.getElementById("colorInput");
+const idInput = document.getElementById('idInput');
+const colorInput = document.getElementById('colorInput');
 
-console.log(idInput);
-console.log(colorInput);
+// console.log(idInput);
+// console.log(colorInput);
 
 function setCard() {
   const card = document.getElementById(idInput.value);
+  // console.log(card);
   card.style.color = colorInput.value;
 }
 
-//Haven't completed the Black Diamond challenge yet

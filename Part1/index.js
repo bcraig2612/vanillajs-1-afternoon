@@ -1,5 +1,6 @@
 const board = [];
 let win = false;
+
 function play(clickedId) {
   const playerSpan = document.getElementById("player");
   const clickedElement = document.getElementById(clickedId);
@@ -8,13 +9,13 @@ function play(clickedId) {
     return;
   }
   if (playerSpan.innerText === "X") {
-    playerSpan.innerText = "0";
+    playerSpan.innerText = "O";
     clickedElement.innerText = "X";
     board[clickedId] = "X";
   } else {
     playerSpan.innerText = "X";
-    clickedElement.innerText = "0";
-    board[clickedId] = "0";
+    clickedElement.innerText = "O";
+    board[clickedId] = "O";
   }
   console.log(board);
 
@@ -37,8 +38,7 @@ function play(clickedId) {
   if (
     middleLeft !== undefined &&
     middleLeft === middleCenter &&
-    middleLeft === middleRight
-  ) {
+    middleLeft === middleRight) {
     alert(`${middleLeft} is the winner`);
     win = true;
     reset();
@@ -105,7 +105,7 @@ function play(clickedId) {
     return;
   }
 }
-console.log(board);
+// console.log(board);
 let boardFull = true;
 for (let i = 0; i <= 8; i++) {
   if (board[i] === undefined) {
